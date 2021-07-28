@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar {
+  background-color: #458768;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  max-width: 1500px;
+}
+
+.nav-logo {
+  align-items: center;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  flex-grow: 1;
+}
+
+.nav-menu {
+  @apply flex list-none text-center mr-8;
+}
+
+.nav-container {
+  max-width: 1500px;
+}
+
+.nav-links {
+  @apply text-white no-underline h-full;
+  padding: 0.5rem 1rem;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-item {
+  @apply leading-10 mr-4;
+}
+
+.nav-item:after {
+  content: "";
+  @apply block w-0 bg-transparent;
+  height: 3px;
+  transition: width 0.7s ease, background-color 0.3s ease;
+}
+
+.nav-item:hover:after {
+  @apply bg-yellow-500 w-full;
+}
+
+.nav-item .active {
+  @apply text-yellow-500;
+}
+
+@media (max-width: 960px) {
+  .nav-menu {
+    @apply flex flex-col w-full absolute top-20;
+    left: -110%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: #1f5156;
+    left: 0px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nav-item .active {
+    color: #ffdd40;
+    border: none;
+  }
+
+  .nav-links {
+    padding: 1.5rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #ffdd40;
+  }
+}
+
+/* breadcrumb */
+
+ul.breadcrumb {
+  @apply flex flex-row items-center text-lg;
+}
+
+ul.breadcrumb li:not(:last-child):after {
+  content: "/";
+  @apply px-4;
+}
+
+ul.breadcrumb li:not(:last-child) a {
+  @apply font-light;
+}
+
+ul.breadcrumb li:last-child a {
+  @apply font-semibold;
+}
+
+/* card */
+.card .card-shadow {
+  @apply transition duration-300 shadow-none h-full;
+}
+
+.card:hover .card-shadow {
+  @apply shadow-lg;
+}
