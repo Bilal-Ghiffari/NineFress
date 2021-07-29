@@ -62,6 +62,27 @@
       "title": "Kecap Manis",
       "price": "10000",
       "imageUrl": "/images/content/product-9.png"
-    }
+     },
+     {
+      "id": 10,
+      "idp": 4,
+      "title": "Daun Bawang",
+      "price": "5000",
+      "imageUrl": "/images/content/product-10.png"
+     },
+     {
+     "id": 11,
+     "idp": 4,
+     "title": "Daun Selada Keriting",
+     "price": "15000",
+     "imageUrl": "/images/content/product-11.png"
+     },
+     {
+     "id": 12,
+     "idp": 4,
+     "title": "Indomie Goreng 5 Pack",
+     "price": "10000",
+     "imageUrl": "/images/content/product-12.png"
+     }
   ]
 }

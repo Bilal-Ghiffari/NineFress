@@ -2,7 +2,7 @@
   "data": [
     {
       "id": 1,
-      "category": "Carbohydrate",
+      "category": "Carbohydrates",
       "title": "Carbohydrate",
       "imgUrl": "/images/content/category-1.png"
     },
@@ -10,21 +10,21 @@
     {
       "id": 2,
       "category": "minuman",
-      "title": "Fress drink",
-      "imgUrl": "/images/content/category-2.png"
+      "title": "Healthy Beverages",
+      "imgUrl": "/images/content/HealthyDrinks.png"
     },
 
     {
       "id": 3,
       "category": "vegetable",
-      "title": "Fress Vegetables",
+      "title": "Fresh Vegetables",
       "imgUrl": "/images/content/category-3.png"
     },
 
     {
       "id": 4,
       "category": "meat",
-      "title": "Fress meat",
+      "title": "Fresh Meats",
       "imgUrl": "/images/content/category-4.png"
     }
   ]

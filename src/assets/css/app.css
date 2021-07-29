@@ -25,11 +25,18 @@
 }
 
 .nav-logo {
+     -webkit-filter: brightness(100%);
   align-items: center;
   margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
   flex-grow: 1;
+}
+
+/* --------------------- Hover Logo --------------------- */
+
+.nav-logo:hover {
+     -webkit-filter: brightness(90%);
 }
 
 .nav-menu {

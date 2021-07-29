@@ -11,47 +11,51 @@ export default function Navbar() {
             <nav className="navbar font-big">
                 <div className="nav-container">
                     <NavLink to="/" className="nav-logo">
-                        <img src="images/content/Logo.png" alt="Logo" />
+                        <img src="images/content/fr9sh.png" alt="Fresh9" title="FreshNine Home" width="220px"/>
                     </NavLink>
 
                     <ul className={click ? "nav-menu active" : "nav-menu"}>
                         <li className="nav-item">
                             <NavLink
-                            exact 
-                            to="/" 
-                            activeClassName="active" 
-                            className="nav-links" 
+                            exact
+                            to="/"
+                            activeClassName="active"
+                            className="nav-links"
                             onClick={handleClick}
+                            title="Home"
                             >
                                 Home
                             </NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink
-                            to="/categories" 
-                            activeClassName="active" 
-                            className="nav-links" 
+                            to="/categories"
+                            activeClassName="active"
+                            className="nav-links"
                             onClick={handleClick}
+                            title="Categories"
                             >
                                 Categories
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink 
-                            to="/blog" 
-                            activeClassName="active" 
-                            className="nav-links" 
+                            <NavLink
+                            to="/blog"
+                            activeClassName="active"
+                            className="nav-links"
                             onClick={handleClick}
+                            title="Blog"
                             >
                                 Blog
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink 
-                            to="/contact" 
-                            activeClassName="active" 
-                            className="nav-links" 
+                            <NavLink
+                            to="/contact"
+                            activeClassName="active"
+                            className="nav-links"
                             onClick={handleClick}
+                            title="Contact Us"
                             >
                                 Contact Us
                             </NavLink>
