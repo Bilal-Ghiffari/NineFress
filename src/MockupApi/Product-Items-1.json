@@ -1,0 +1,71 @@
+{
+  "id": 1,
+  "count": 1,
+  "price": 9000,
+  "title": "Cabai Merah",
+  "description": "<p class='text-xl leading-7 mb-6'>Cabe merah impor/lokal,  buah dan sayuran maupun bumbu. Digunakan sebagai salah satu bahan masakan yang menghasilkan rasa pedas..</p><p class='text-xl leading-7 mb-6'>Quality Greens Ornanic Cabe Merah Besar 100 g meruapakan cabai merah besar pilihan yang berkualitas yang sering dijadikan pelengkap makanan dan penambah rasa pedas</p>",
+  "imageUrl": "CabeSemillar-1",
+  "category": {
+    "id": 1,
+    "title": "Buah"
+  },
+
+  "relatedProducts": [
+    {
+      "id": 1,
+      "idc": "1",
+      "title": "",
+      "price": 9000,
+      "imageUrl": "semillar-1"
+    },
+    {
+      "id": 2,
+      "idc": "1",
+      "title": "",
+      "price": 9000,
+      "imageUrl": "semillar-2"
+    },
+    {
+      "id": 3,
+      "idc": "1",
+      "title": "",
+      "price": 9000,
+      "imageUrl": "semillar-3"
+    },
+    {
+      "id": 4,
+      "idc": "1",
+      "title": "",
+      "price": 9000,
+      "imageUrl": "semillar-4"
+    },
+    {
+      "id": 5,
+      "idc": "1",
+      "title": "",
+      "price": 39000,
+      "imageUrl": "semillar-5"
+    },
+    {
+      "id": 6,
+      "idc": "1",
+      "title": "",
+      "price": 9000,
+      "imageUrl": "semillar-6"
+    },
+    {
+      "id": 7,
+      "idc": "1",
+      "title": "",
+      "price": 9000,
+      "imageUrl": "semillar-7"
+    },
+    {
+      "id": 8,
+      "idc": "1",
+      "title": "",
+      "price": 9000,
+      "imageUrl": "semillar-8"
+    }
+  ]
+}

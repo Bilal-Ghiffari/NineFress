@@ -11,7 +11,7 @@ export default function Navbar() {
             <nav className="navbar font-big">
                 <div className="nav-container">
                     <NavLink to="/" className="nav-logo">
-                        <img src="images/content/Logo.png" alt="Logo" />
+                        <img src="/images/content/Logo.png" alt="Logo" />
                     </NavLink>
 
                     <ul className={click ? "nav-menu active" : "nav-menu"}>

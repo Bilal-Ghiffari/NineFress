@@ -2,20 +2,20 @@ import { BrowserRouter as Router, Route ,Switch} from 'react-router-dom'
 import 'assets/css/app.css'
 import Homepage from 'Pages/Homepage';
 import CategoriesItem from 'Pages/ItemCategories';
-import Categories from 'Parts/Categories/categories';
-
+import DetailsPage from 'Pages/DetailsPage';
+import Provinder from 'Helper/Hooks/useGlobalContext';
 
 function App() {
   return (
-    <div className="App">
+    <Provinder>
       <Router>
         <Switch>
           <Route exact path="/" component={Homepage}/>
-          <Route exact path="/categories" component={Categories}/>
-          <Route path="/categories/item/:title" component={CategoriesItem} />
+          <Route exact path="/categories/:idc" component={CategoriesItem} />
+          <Route path="/categories/:idc/product/:idp" component={DetailsPage} />
         </Switch>
       </Router>
-    </div>
+    </Provinder>
   );
 }
 

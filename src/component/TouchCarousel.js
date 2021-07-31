@@ -4,7 +4,7 @@ import {addClass, removeClass} from 'Format/classNameModifier';
 export default function TouchCarousel({children, refContainer}) {
 
     // variable Hooks
-    // const containerClientRect = refContainer.current.getBoundingClientRect();
+    const containerClientRect = refContainer.current.getBoundingClientRect();
     const refDragHandler = useRef(null);
     const [index, setIndex] = useState(0);
     const threshold = 100;
@@ -18,7 +18,7 @@ export default function TouchCarousel({children, refContainer}) {
     const isAllowShift = useRef(true);
     const cards = useRef();
     const cardCount = cards.current?.length || 0;
-    const cardSize = cards.current?.[0].offsetWidth || 0;
+    const cardSize = cards.current?.[0]?.offsetWidth || 0;
     
 
     console.log(refDragHandler, "refdraghandler");
@@ -170,9 +170,8 @@ useLayoutEffect(() => {
 
 
     return (
-        <div ref={refDragHandler} className="flex -mx-4 flex-row relative" >
+        <div ref={refDragHandler} className="flex -mx-4 flex-row relative" style={{paddingLeft: containerClientRect.left - 16}}>
             {children}
         </div>
     )
 }
-// style={{paddingLeft: containerClientRect.left - 16}}
