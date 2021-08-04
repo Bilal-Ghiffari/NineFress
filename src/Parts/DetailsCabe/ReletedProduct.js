@@ -44,7 +44,7 @@ export default function ReletedProduct({data}) {
                                         <div className="px-3 flex-none" style={{width: 320}} key={item._id}>
                                             <div className="rounded-xl p-4 pb-8 relative bg-white">
                                                 <div className="rounded-xl overflow-hidden card-shadow w-full h-36">
-                                                    <img src={item.imageUrl} alt="Image-Sejenis Product" className="w-full h-full object-cover object-center" />
+                                                    <img src={item.altImageUrl} alt="Product Sejenis" className="w-full h-full object-cover object-center" />
                                                 </div>
                                                 <h5 className="text-lg font-semibold mt-4">{item.title}</h5>
                                                 <span className="">{item.price}</span> <br />
