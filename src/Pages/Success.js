@@ -10,14 +10,14 @@ export default function Success() {
                 <div className="container mx-auto min-h-screen">
                     <div className="flex flex-col items-center justify-center">
                         <div className="w-full md:w-4/12 text-center">
-                            <img src="/images/content/illustration-success.png" alt="Success Ilustrasion" />
-                            <h2 clasName="text-3xl font-semibold mb-6">Anda telah Menyelesaikan pembayaran</h2>
+                            <img src="/images/content/illustration-success.png" alt="Success Ilustrasion" className="mt-36" />
+                            <h2 clasName="text-3xl font-semibold mt-36">Anda telah Menyelesaikan pembayaran</h2>
                             <p className="text-lg mb-12">
                                 Pesanan anda telah diproses dan siap untuk kami kirimkan
                             </p>
                             <Link to="/"
-                            className="text-white bg-green-500 
-                            focus:outline-none w-full 
+                            className="text-white bg-green-500
+                            focus:outline-none w-full
                             py-3 rounded-full text-lg focus:text-black transition-all duration-200 px-8 cursor-pointer"
                             >
                                 Back to Shop
