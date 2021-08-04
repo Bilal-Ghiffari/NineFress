@@ -7,8 +7,15 @@ import useForm from 'Helper/Hooks/useForm';
 
 export default function ShippingDetails() {
     const history = useHistory()
-    const {dispatch} = useGlobalContext();
+    const {state, dispatch} = useGlobalContext();
     // const {run, data} = useAsnyc()
+
+    const itemsOnCart = [];
+    
+    Object.keys(state.cart).map((key) => {
+        let item = state.cart[key];
+        itemsOnCart.push({ qty: item.qty, _id: item._id, title: item.id_product_ref.title });
+    })
 
     const {state: payload, UpdateState} = useForm({
         fullName: "",
@@ -18,6 +25,7 @@ export default function ShippingDetails() {
         phoneNumber: "",
         courier: "",
         paymentMethod: "",
+        items: itemsOnCart
     })
 
     console.log(payload)
@@ -64,19 +72,19 @@ export default function ShippingDetails() {
                             value={payload.fullName}
                             name="fullName"
                             className="border border-gray-200 rounded-lg px-4 py-2 bg-white text-sm focus:outline-blue-200 focus:outline-none"
-                            placeholder="Input Your Name"
+                            placeholder="John Doe"
                         />
                     </div>
                     <div className="flex flex-col mb-4">
                         <label htmlFor="emailAddress" className="text-sm mb-2">
-                            EmailAddress
+                            Email Address
                         </label>
                         <input type="email"
                             onChange={UpdateState}
                             value={payload.emailAddress}
                             name="emailAddress"
                             className="border border-gray-200 rounded-lg px-4 py-2 bg-white text-sm focus:outline-blue-200 focus:outline-none"
-                            placeholder="Input Your Name"
+                            placeholder="name@example.com"
                         />
                     </div>
                     <div className="flex flex-col mb-4">
@@ -88,37 +96,37 @@ export default function ShippingDetails() {
                             value={payload.address}
                             name="address"
                             className="border border-gray-200 rounded-lg px-4 py-2 bg-white text-sm focus:outline-blue-200 focus:outline-none"
-                            placeholder="Input Your Address"
+                            placeholder="Jl. Jalan"
                         />
                     </div>
                     <div className="flex flex-col mb-4">
                         <label htmlFor="postalCode" className="text-sm mb-2">
-                            postalCode
+                            Postal Code
                         </label>
                         <input type="number"
                             onChange={UpdateState}
                             value={payload.postalCode}
                             name="postalCode"
                             className="border border-gray-200 rounded-lg px-4 py-2 bg-white text-sm focus:outline-blue-200 focus:outline-none"
-                            placeholder="Input Your PostalCode"
+                            placeholder="12345"
                         />
                     </div>
                     <div className="flex flex-col mb-4">
                         <label htmlFor="phoneNumber" className="text-sm mb-2">
-                            phoneNumber
+                            Phone Number
                         </label>
                         <input type="tel"
                             onChange={UpdateState}
                             value={payload.phoneNumber}
                             name="phoneNumber"
                             className="border border-gray-200 rounded-lg px-4 py-2 bg-white text-sm focus:outline-blue-200 focus:outline-none"
-                            placeholder="Input Your PhoneNumber"
+                            placeholder="088888888888"
                         />
                     </div>
 
                     <div className="flex flex-col mb-4">
                         <label htmlFor="courier">
-                            Choose Courier
+                            Choose your courier service:
                         </label>
                         <div className="flex -mx-2">
                             <div className="px-2 w-full h-24 mb-4">
@@ -140,7 +148,7 @@ export default function ShippingDetails() {
 
                     <div className="flex flex-col mb-4">
                         <label htmlFor="paymentMethod">
-                            Choose paymentMethod
+                            Choose your payment method:
                         </label>
                         <div className="flex -mx-2">
                             <div className="px-2 w-full h-24 mb-4">
@@ -165,7 +173,7 @@ export default function ShippingDetails() {
                         disabled={!isSumbitDisabled}
                         className="bg-green-300 text-white hover:bg-green-500 focus:outline-none w-full py-3 rounded-full text-lg focus:text-black transition-all duration-300 px-6"
                     >
-                        Check Now
+                        Confirm
                     </button>
                 </div>
                 </form>
