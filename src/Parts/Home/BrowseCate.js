@@ -25,7 +25,7 @@ export default function BrowseCate() {
                     {
                         isLoading ? <LoadingSkeleton />  : 
                         data?.map((item) => {
-                            if(item._id < 5)  return <div className="col-span-1 row-span-1 card my-10" key={item._id}>
+                                return <div className="col-span-1 row-span-1 card my-10" key={item._id}>
                                         <Link to={`/categories/${item._id}`}>
                                             <div className="relative card-shadow ">
                                                 <img className="w-full h-full object-cover object-center rounded-lg" src={item.imageUrl} alt="" />

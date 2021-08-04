@@ -4,6 +4,7 @@ import CarouselTouch from 'component/TouchCarousel';
 import fetch from 'Helper/Fetch';
 import useAsnyc from 'Helper/Hooks/useAsyn';
 import SkeletonProduct from 'Helper/Loading/SkeletonProduct';
+import "Format/currency";
 
 
 export default function Product() {
@@ -46,7 +47,7 @@ export default function Product() {
                                             <img src={item.imageUrl} alt="ProductItem" className="w-full h-full object-cover object-center" />
                                         </div>
                                         <h5 className="text-lg font-semibold mt-4 font-small">{item.title}</h5>
-                                        <span>{item.price}</span>
+                                        <span>{item.price.currency()}</span>
                                         </Link>
                                     </div>
                                 )

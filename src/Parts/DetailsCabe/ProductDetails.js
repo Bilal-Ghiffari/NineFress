@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
 import {useGlobalContext} from 'Helper/Hooks/useGlobalContext';
+import "Format/currency";
 
 export default function ProductDetails({data}) {
     const {state, dispatch} = useGlobalContext();
@@ -16,7 +17,7 @@ export default function ProductDetails({data}) {
                     <div className="col-span-1 row-span-1">
                         <div className="ml-20">
                             <h2 className="text-3xl font-bold font-big">{data?.id_product_ref.title}</h2>
-                            <p className="text-xl py-5 font-medium">{data?.id_product_ref.price}</p>
+                            <p className="text-xl py-5 font-medium">{data?.id_product_ref.price.currency()}</p>
                             <button className="hidden 
                                     transition-all 
                                     duration-200 bg-green-500 
