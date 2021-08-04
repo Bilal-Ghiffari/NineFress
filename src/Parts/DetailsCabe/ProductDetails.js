@@ -18,11 +18,11 @@ export default function ProductDetails({data}) {
                         <div className="ml-20">
                             <h2 className="text-3xl font-bold font-big">{data?.id_product_ref.title}</h2>
                             <p className="text-xl py-5 font-medium">{data?.id_product_ref.price.currency()}</p>
-                            <button className="hidden 
-                                    transition-all 
-                                    duration-200 bg-green-500 
-                                    text-white focus:bg-black 
-                                    focus:text-white rounded-lg 
+                            <button className="hidden
+                                    transition-all
+                                    duration-200 bg-green-500
+                                    text-white focus:bg-black
+                                    focus:text-white rounded-lg
                                     px-8 py-3 md:inline-flex mt-8"
                                 onClick={() => dispatch({
                                     type: "ADD_TO_CART",
@@ -33,6 +33,11 @@ export default function ProductDetails({data}) {
 
                                 Add to Cart
                             </button>
+                            <div className="flex md:flex-row mt-9">
+                                   <i className="ri-store-2-line ri-3x m-3 icon"></i>
+                                   <h2 className="text-base font-small text-gray-600 my-auto ">TOKO </h2>
+                            </div>
+                            <h2 className="text-base font-small text-green-900">{data?.merchant.nama}</h2>
                             <hr className="my-8 hidden md:flex" />
                             <h5 className="text-xl font-semibold font-small mt-8 mb-4 md:mt-0">Details</h5>
                             <div className="font-big text-gray-700">
@@ -41,10 +46,10 @@ export default function ProductDetails({data}) {
                             }
                             </div>
                             <hr className="my-5 md:hidden" />
-                            <button className="md:hidden 
-                                    transition-all duration-200 
-                                    bg-green-500 text-white 
-                                    focus:bg-black focus:text-white 
+                            <button className="md:hidden
+                                    transition-all duration-200
+                                    bg-green-500 text-white
+                                    focus:bg-black focus:text-white
                                     rounded-lg px-8 py-3 inline-flex mt-5"
                             >
                             <img className="pr-3" src="/images/Icon/icon-cart.svg" alt="Icon-cart" />

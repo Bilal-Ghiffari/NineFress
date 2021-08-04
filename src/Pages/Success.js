@@ -11,7 +11,7 @@ export default function Success() {
                     <div className="flex flex-col items-center justify-center">
                         <div className="w-full md:w-4/12 text-center">
                             <img src="/images/content/illustration-success.png" alt="Success Ilustrasion" className="mt-36" />
-                            <h2 clasName="text-3xl font-semibold mt-36">Anda telah Menyelesaikan pembayaran</h2>
+                            <h2 className="text-3xl font-semibold my-6">Anda telah Menyelesaikan pembayaran</h2>
                             <p className="text-lg mb-12">
                                 Pesanan anda telah diproses dan siap untuk kami kirimkan
                             </p>
