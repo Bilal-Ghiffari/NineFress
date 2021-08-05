@@ -12,7 +12,7 @@ export default function CategoriesItem1() {
             <Navbar />
             <Breadcrumb list={[
                 {url: "/", name: "Home"},
-                {url: `/categories1/${idc}`, name: "Categories"},
+                {url: `/categories/${idc}`, name: "Categories"},
             ]} />
             <Categories1 />
             <AsideMenu />
