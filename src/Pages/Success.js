@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from 'Parts/navbar'
 import { Link } from 'react-router-dom';
+import AsideMenu from 'Parts/AsideMenu';
 
 export default function Success() {
     return (
@@ -26,6 +27,7 @@ export default function Success() {
                     </div>
                 </div>
             </section>
+            <AsideMenu />
         </>
     )
 }
