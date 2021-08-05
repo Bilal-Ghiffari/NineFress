@@ -17,15 +17,15 @@ export default function Categories1() {
     console.log(idc);
 
     return (
-        <section className="my-16 bg-gray-100">
+        <section className="my-16 bg-white">
             <div className="container mx-auto">
                 <div className="flex md:justify-start justify-center py-5">
                     <h1 className="text-2xl text-green-500 font-bold font-big capitalize">Category: {data ? data[0].id_category.category : "-"}</h1>
                 </div>
                 <div className="grid grid-rows-1 md:grid-cols-4 grid-cols-2 gap-4">
-                    
+
                     {
-                        isLoading ? <LoadingSkeleton />  : 
+                        isLoading ? <LoadingSkeleton />  :
                         data?.map((item) => {
                                 return <div className="col-span-1 row-span-1 card my-10" key={item._id}>
                                         <Link to={`/categories/${item.id_category._id}/product/${item._id}`}>
