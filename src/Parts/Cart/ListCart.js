@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {useGlobalContext} from 'Helper/Hooks/useGlobalContext';
 import { Link } from 'react-router-dom';
-import "Format/numbering";
+import "Format/numbring";
 
 export default function ListCart() {
 
     const {state, dispatch} = useGlobalContext()
+    console.log(state.cart);
+    const [qty, setQty] = useState(1);
 
     return (
         <div className="w-full px-4 mb-4 md:w-8/12 md:mb-0">
@@ -55,13 +57,13 @@ export default function ListCart() {
 
                     return (
                         <div className="flex flex-start flex-wrap items-center -mx-9" key={key}>
-                            <div className="px-4 flex-none">
+                            <div className="px-4 ml-2 flex-none">
                                 <div className="" style={{width: 90, height: 90}}>
                                     <img src={item.imageUrl} alt="Image-listCart" />
                                 </div>
                             </div>
                             {/* Screen Mobile */}
-                            <div className="px-12 md:px-4 w-auto flex-1 md:w-5/12">
+                            <div className="ml-4 px-12 md:px-4 w-auto flex-1 md:w-5/12">
                                 <div className="">
                                     <h6 className="font-semibold text-lg md:text-xl leading-8">
                                         {item.id_product_ref.title}
@@ -70,16 +72,22 @@ export default function ListCart() {
                                         {item.id_product_ref.id_category.category}
                                     </span>
                                     <h6 className="font-semibold text-base md:text-lg block md:hidden py-3">
-                                        {item.id_product_ref.price.numbering()}
+                                        {(item.id_product_ref.price*qty).numbring()}
                                     </h6>
                                     <div className="amount md:hidden pt-3">
-                                            <button className="count">
-                                                <i className="ri-subtract-line ri-lg"></i>
-                                            </button>
-                                                <span>0</span>
-                                            <button className="count">
-                                                <i className="ri-add-fill ri-lg"></i>
-                                            </button>
+                                        <button className="count" onClick={() => {
+                                            qty > 0 ? setQty(qty-1) : setQty(0);
+                                            state.cart[key].qty = qty;
+                                        }}>
+                                            <i className="ri-subtract-line ri-lg"></i>
+                                        </button>
+                                            <span>{qty}</span>
+                                        <button className="count" onClick={() => {
+                                            setQty(qty+1);
+                                            state.cart[key].qty = qty;
+                                        }}>
+                                            <i className="ri-add-fill ri-lg"></i>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -87,21 +95,27 @@ export default function ListCart() {
                             <div className="px-4 w-auto flex-none md:flex-1 md:w-5/12 hidden md:block">
                                 <div className="">
                                     <h6 className="font-semibold text-lg">
-                                        {item.id_product_ref.price}
+                                        {(item.id_product_ref.price*qty).numbring()}
                                     </h6>
                                 </div>
                             </div>
                             <div className="px-4 w-auto flex-none md:flex-1 md:w-5/12 hidden md:block">
-                                        <div className="amount">
-                                            <button className="count">
-                                                <i className="ri-subtract-line ri-lg"></i>
-                                            </button>
-                                                <span>0</span>
-                                            <button className="count">
-                                                <i className="ri-add-fill ri-lg"></i>
-                                            </button>
-                                        </div>
-                                    </div>
+                                <div className="amount">
+                                    <button className="count" onClick={() => {
+                                        qty > 0 ? setQty(qty-1) : setQty(0);
+                                        state.cart[key].qty = qty;
+                                    }}>
+                                        <i className="ri-subtract-line ri-lg"></i>
+                                    </button>
+                                        <span>{qty}</span>
+                                    <button className="count" onClick={() => {
+                                        setQty(qty+1);
+                                        state.cart[key].qty = qty;
+                                    }}>
+                                        <i className="ri-add-fill ri-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
                             <div className="px-4 w-2/12">
                                 <div className="text-center">
                                     <Link
@@ -115,6 +129,7 @@ export default function ListCart() {
                                     </Link>
                                 </div>
                             </div>
+                            {state.cart[key].qty = qty}
                         </div>
                     )
                 })

@@ -1,0 +1,15 @@
+/* body {
+     margin: 0;
+     padding: 0;
+} */
+
+.MaskImage {
+
+     /* width: 100%; */
+     clip-path: url(#wave-box);
+     -webkit-filter: brightness(50%);
+}
+
+.positY {
+     transform: translateY(-235px);
+}

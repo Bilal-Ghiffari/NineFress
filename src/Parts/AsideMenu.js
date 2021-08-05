@@ -57,9 +57,9 @@ export default function AsideMenu() {
                             isActive={actice === 2 ? null : 2}
                             title="Company"
                         >
-                            <Link to="/" className="hover:underline py-1 block">About</Link>
-                            <Link to="/" className="hover:underline py-1 block">Contact us</Link>
-                            <Link to="/" className="hover:underline py-1 block">Career</Link>
+                            <Link to="/about" className="hover:underline py-1 block">About</Link>
+                            <Link to="/contact" className="hover:underline py-1 block">Contact us</Link>
+                            <Link to="/about" className="hover:underline py-1 block">Career</Link>
                         </SitemapLinks>
 
                         <SitemapLinks
@@ -67,7 +67,7 @@ export default function AsideMenu() {
                             isActive={actice === 3 ? null : 3}
                             title="About"
                         >
-                            <Link to="/" className="hover:underline py-1 block">Career</Link>
+                            <Link to="/about" className="hover:underline py-1 block">Career</Link>
                             <Link to="/" className="hover:underline py-1 block">Office</Link>
                             <Link to="/" className="hover:underline py-1 block">Blog</Link>
                         </SitemapLinks>
