@@ -9,6 +9,7 @@ import ReletedProduct from 'Parts/DetailsTelur/ReletedProduct';
 import AsideMenu from 'Parts/AsideMenu';
 import SkeletonProductDetails from 'Helper/Loading/SkeletonProductDetails';
 import SkeletonReletedProduct from 'Helper/Loading/SkeletonReletedProduct';
+import useScrollToTop from 'Helper/Hooks/useScrollToTop';
 
 
 
@@ -27,7 +28,8 @@ export default function DetailsPage() {
     const Releted  = () => {
         return isLoading ? <SkeletonReletedProduct /> : <ReletedProduct data={data?.relatedProducts} />
     }
-
+    
+    useScrollToTop()
     return (
         <>
             <Navbar />
