@@ -46,9 +46,9 @@ export default function AsideMenu() {
                             title="Overview"
                         >
                             <li>
-                                <Link to="/" className="hover:underline py-1 block">Shipping</Link>
-                                <Link to="/" className="hover:underline py-1 block">Refund</Link>
-                                <Link to="/" className="hover:underline py-1 block">Promotion</Link>
+                                <Link to="/nothing" className="hover:underline py-1 block">Shipping</Link>
+                                <Link to="/nothing" className="hover:underline py-1 block">Refund</Link>
+                                <Link to="/nothing" className="hover:underline py-1 block">Promotion</Link>
                             </li>
                         </SitemapLinks>
 
@@ -68,8 +68,8 @@ export default function AsideMenu() {
                             title="About"
                         >
                             <Link to="/about" className="hover:underline py-1 block">Career</Link>
-                            <Link to="/" className="hover:underline py-1 block">Office</Link>
-                            <Link to="/" className="hover:underline py-1 block">Blog</Link>
+                            <Link to="/nothing" className="hover:underline py-1 block">Office</Link>
+                            <Link to="/nothing" className="hover:underline py-1 block">Blog</Link>
                         </SitemapLinks>
 
                         <SitemapLinks
@@ -77,9 +77,9 @@ export default function AsideMenu() {
                             isActive={actice === 4 ? null : 4}
                             title="Help"
                         >
-                            <Link to="/" className="hover:underline py-1 block">Help Center</Link>
-                            <Link to="/" className="hover:underline py-1 block">Terms and Conditions</Link>
-                            <Link to="/" className="hover:underline py-1 block">Privacy Policy</Link>
+                            <Link to="/nothing" className="hover:underline py-1 block">Help Center</Link>
+                            <Link to="/nothing" className="hover:underline py-1 block">Terms and Conditions</Link>
+                            <Link to="/nothing" className="hover:underline py-1 block">Privacy Policy</Link>
                         </SitemapLinks>
                     </div>
                 </aside>

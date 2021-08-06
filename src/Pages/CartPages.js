@@ -4,8 +4,10 @@ import ListCart from 'Parts/Cart/ListCart'
 import ShippingDetails from 'Parts/Cart/ShippingDetails'
 import Navbar from 'Parts/navbar'
 import React from 'react'
+import useScrollToTop from 'Helper/Hooks/useScrollToTop';
 
 export default function CartPages() {
+     useScrollToTop()
     return (
         <>
             <Navbar />

@@ -11,13 +11,13 @@ export default function Hero() {
                     The most healthy organic food is safe for health
                 </h2>
             <div className="font-small">
-                <a href="#browse-the-room"
-                className="bg-green-500 
-                text-white 
-                hover:bg-black 
-                hover:text-white 
-                rounded-lg px-8 py-3 mt-4 
-                inline-block flex-none 
+                <a href="/nothing"
+                className="bg-green-500
+                text-white
+                hover:bg-black
+                hover:text-white
+                rounded-lg px-8 py-3 mt-4
+                inline-block flex-none
                 transition duration-300"
                 >
                     Shop Now

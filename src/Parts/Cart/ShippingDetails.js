@@ -177,7 +177,7 @@ export default function ShippingDetails() {
                     <button
                         type="submit"
                         disabled={!isSumbitDisabled}
-                        className="bg-green-500 text-white focus:bg-black focus:text-white focus:outline-none w-full py-3 rounded-full text-lg transition-all duration-300 px-6"
+                        className="font-big bg-green-500 text-white focus:bg-black focus:text-white focus:outline-none w-full py-3 rounded-full text-lg transition-all duration-300 px-6"
                     >
                         Confirm
                     </button>
