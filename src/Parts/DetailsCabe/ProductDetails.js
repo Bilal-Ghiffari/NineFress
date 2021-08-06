@@ -32,7 +32,8 @@ export default function ProductDetails({data}) {
                                 Add to Cart
                             </button>
                             <div className="flex md:flex-row mt-9">
-                                    <i className="ri-store-2-line ri-3x m-3 icon"></i>
+                                    {/*<i className="ri-store-2-line ri-3x m-3 icon"></i>*/}
+                                    <img src="/images/content/storeicon.svg" alt="toko" className="m-3 opacity-50" width="60px"></img>
                                     <h2 className="text-base font-small text-gray-600 my-auto ">TOKO </h2>
                             </div>
                             <h2 className="text-base font-small text-green-900">{data?.merchant.nama}</h2>
