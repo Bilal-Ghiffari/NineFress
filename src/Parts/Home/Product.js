@@ -40,12 +40,12 @@ export default function Product() {
                             data?.map((item) => {
                                 return (
                                     <div className="px-4 card group" key={item._id}>
-                                        <Link to={`/categories/${item.id_category._id}/product/${item._id}`}>
                                         <div className="rounded-xl overflow-hidden card-shadow" style={{width:290, height: 370}}>
                                             <img src={item.imageUrl} alt="ProductItem" className="w-full h-full object-cover object-center" />
                                         </div>
                                         <h5 className="text-lg font-semibold mt-4 font-small">{item.title}</h5>
                                         <span>{item.price.currency()}</span>
+                                        <Link className="stretched-link" to={`/categories/${item.id_category._id}/product/${item._id}`}>
                                         </Link>
                                     </div>
                                 )
