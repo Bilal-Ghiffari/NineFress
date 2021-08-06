@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@500;600;700&display=swap");
 @import "remixicon/fonts/remixicon.css";
+@import url("https://cdn.syncfusion.com/ej2/material.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -165,5 +166,9 @@ a.cart.cart-filled svg g circle.dot {
 }
 
 .icon {
-     opacity: 70%;
+  opacity: 70%;
+}
+
+button[disabled] {
+  @apply bg-gray-300 hover:bg-gray-300 text-gray-400 hover:text-gray-400 cursor-not-allowed;
 }

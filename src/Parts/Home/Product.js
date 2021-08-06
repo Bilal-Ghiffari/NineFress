@@ -10,14 +10,12 @@ import "Format/currency";
 export default function Product() {
 
     const refContainer = useRef(null);
-    console.log(refContainer)
 
     const {data, run, isLoading} = useAsnyc();
     useEffect(() => {
         run(fetch({url:"https://ninefresh.herokuapp.com/api/market/item"}))
     }, [run])
 
-    console.log(data)
     return (
         <section className="flex flex-col py-16">
             <div className="container mx-auto mb-4">

@@ -13,7 +13,7 @@ import SkeletonReletedProduct from 'Helper/Loading/SkeletonReletedProduct';
 
 
 export default function DetailsPage() {
-    const {idp, idc} = useParams();
+    const {idp} = useParams();
     const {data, run, isLoading} = useAsnyc();
 
     useEffect(() => {

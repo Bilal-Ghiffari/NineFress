@@ -4,9 +4,7 @@ import {useGlobalContext} from 'Helper/Hooks/useGlobalContext';
 import "Format/currency";
 
 export default function ProductDetails({data}) {
-    const {state, dispatch} = useGlobalContext();
-    console.log(state)
-    // console.log(data)
+    const {dispatch} = useGlobalContext();
     return (
         <section className="mt-10">
             <div className="container mx-auto">
@@ -34,8 +32,8 @@ export default function ProductDetails({data}) {
                                 Add to Cart
                             </button>
                             <div className="flex md:flex-row mt-9">
-                                   <i className="ri-store-2-line ri-3x m-3 icon"></i>
-                                   <h2 className="text-base font-small text-gray-600 my-auto ">TOKO </h2>
+                                    <i className="ri-store-2-line ri-3x m-3 icon"></i>
+                                    <h2 className="text-base font-small text-gray-600 my-auto ">TOKO </h2>
                             </div>
                             <h2 className="text-base font-small text-green-900">{data?.merchant.nama}</h2>
                             <hr className="my-8 hidden md:flex" />

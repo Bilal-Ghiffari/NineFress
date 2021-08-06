@@ -4,9 +4,7 @@ import {useGlobalContext} from 'Helper/Hooks/useGlobalContext';
 import "Format/currency";
 
 export default function ProductDetails({data}) {
-    const {state, dispatch} = useGlobalContext();
-    console.log(state)
-    // console.log(data)
+    const {dispatch} = useGlobalContext();
     return (
         <section className="mt-10">
             <div className="container mx-auto">
