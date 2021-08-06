@@ -5,7 +5,7 @@ import "./contact.css";
 import AsideMenu from 'Parts/AsideMenu';
 
 const Contact = () => {
-    return (  
+    return (
         <>
         <Navbar />
         <main class="">
@@ -81,7 +81,9 @@ const Contact = () => {
         <div class="bg-gray-200">
             <div class="grid grid-cols-1 md:grid-cols-2">
                 <div class="m-5" alt="map Location place-content-center">
+                    <a href="https://www.google.com/maps/place/Paramadina+University/@-6.241133,106.8308091,17z/data=!3m1!4b1!4m5!3m4!1s0x2e69f3c398b48d51:0x2a232e58c9357e8f!8m2!3d-6.241133!4d106.8329978" target="_blank" rel="noopener noreferrer">
                     <img src="images/static/Location_g.png" alt="Location" width="100%" class="m-auto self-center" />
+                    </a>
                 </div>
 
                 <div class="m-5">
@@ -110,5 +112,5 @@ const Contact = () => {
         </>
     );
 }
- 
+
 export default Contact;

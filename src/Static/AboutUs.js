@@ -4,7 +4,7 @@ import './about.css';
 import AsideMenu from 'Parts/AsideMenu';
 
 const AboutUs = () => {
-    return (  
+    return (
         <>
         <Navbar />
         <div class="MaskImage">
@@ -52,10 +52,10 @@ const AboutUs = () => {
         </div>
 
         <div class="bg-gray-100">
-            <h1 class="text-3xl block font-bold text-center z-10">Creative team & conducive environment </h1>
+            <h1 class="text-4xl block font-bold text-center z-20 absolute inset-x-0 transform translate-y-72">Creative team & conducive environment </h1>
             <div class="max-w-screen-lg m-auto">
-                <svg viewBox="0 0 200 200" s class="-z-10" title="Blob">
-                        <path class="" fill="#FF0066"
+                <svg viewBox="0 0 200 200" s class="-z-10 relative" title="Blob">
+                        <path class="" fill="#458768"
                             d="M57.3,-47C72.1,-27.2,80.5,-3.4,74.4,14.5C68.4,32.5,47.9,44.8,27.2,53.7C6.5,62.6,-14.5,68.1,-33.2,61.8C-52,55.5,-68.6,37.5,-75.1,15.4C-81.5,-6.7,-77.8,-32.9,-63.6,-52.6C-49.4,-72.3,-24.7,-85.5,-1.7,-84.1C21.3,-82.7,42.5,-66.8,57.3,-47Z"
                             transform="translate(100 100)" />
                 </svg>
@@ -122,5 +122,5 @@ const AboutUs = () => {
         </>
     );
 }
- 
+
 export default AboutUs;
