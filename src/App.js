@@ -9,6 +9,7 @@ import CartPages from 'Pages/CartPages';
 import Success from 'Pages/Success';
 import AboutUs from 'Static/AboutUs';
 import Contact from 'Static/Contact';
+import VerificationNumber from 'Pages/VerificationNumber';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/contact" component={Contact} />
           <Route path="/cart" component={CartPages} />
           <Route path="/success" component={Success} />
+          <Route path="/verification" component={VerificationNumber} />
         </Switch>
       </Router>
     </Provinder>

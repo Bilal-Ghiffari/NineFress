@@ -13,9 +13,6 @@ export default function Categories1() {
         run(fetch({url:`https://ninefresh.herokuapp.com/api/market/item-group/${idc}`}))
     },[run])
 
-    console.log(data)
-    console.log(idc);
-
     return (
         <section className="my-16 bg-white">
             <div className="container mx-auto">

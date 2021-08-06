@@ -21,15 +21,15 @@ export default function TouchCarousel({children, refContainer}) {
     const cardSize = cards.current?.[0]?.offsetWidth || 0;
     
 
-    console.log(refDragHandler, "refdraghandler");
-    console.log(positionInitial, "initila");
-    console.log(positionX1, "X1")
-    console.log(positionX2, "X2")
-    console.log(cards, "cards")
-    console.log(threshold, "thre")
-    console.log(cardSize, "size")
-    console.log(cardCount, "cardcout")
-    console.log(isAllowShift, "isallowshit")
+    // console.log(refDragHandler, "refdraghandler");
+    // console.log(positionInitial, "initila");
+    // console.log(positionX1, "X1")
+    // console.log(positionX2, "X2")
+    // console.log(cards, "cards")
+    // console.log(threshold, "thre")
+    // console.log(cardSize, "size")
+    // console.log(cardCount, "cardcout")
+    // console.log(isAllowShift, "isallowshit")
 
 // mengatur position Index
 const checkIndex = useCallback((e) => {

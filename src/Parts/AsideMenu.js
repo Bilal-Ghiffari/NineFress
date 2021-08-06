@@ -24,7 +24,7 @@ function SitemapLinks({isActive, setActive, children, title}){
             "md:h-auto md:visible md:opacity-100 overflow-hidden transition duration-300",
             isActive ? "h-0 invisible bg-opacity-0" : "opacity-100"
         ].join(" ")}>
-                {children}
+            {children}
         </ul>
     </div>
     )

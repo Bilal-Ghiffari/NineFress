@@ -12,8 +12,6 @@ export default function BrowseCate() {
         run(fetch({url:"https://ninefresh.herokuapp.com/api/market/item-category"}))
     },[run])
 
-    console.log(data)
-
     return (
         <section className="my-16 bg-gray-100">
             <div className="container mx-auto">

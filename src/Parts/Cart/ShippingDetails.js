@@ -1,14 +1,14 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { useHistory} from 'react-router-dom';
 import {useGlobalContext} from 'Helper/Hooks/useGlobalContext';
 import fetch from 'Helper/Fetch';
 import useForm from 'Helper/Hooks/useForm';
 
 
+
 export default function ShippingDetails() {
     const history = useHistory()
-    const {state, dispatch} = useGlobalContext();
-    // const {run, data} = useAsnyc()
+    const {state, dispatch} = useGlobalContext()
 
     const itemsOnCart = [];
     
@@ -25,7 +25,7 @@ export default function ShippingDetails() {
         phoneNumber: "",
         courier: "",
         paymentMethod: "",
-        items: itemsOnCart
+        items: itemsOnCart,
     })
 
     console.log(payload)
@@ -44,7 +44,7 @@ export default function ShippingDetails() {
                 body: JSON.stringify(payload)
             })
             if(response){
-                history.push("/success")
+                history.push("/verification")
                 dispatch({
                     type: "RESET"
                 })
@@ -54,6 +54,7 @@ export default function ShippingDetails() {
             console.log(error)
         }
     }
+
 
     return (
         <div className="w-full mt-10 md:w-4/12">
@@ -75,6 +76,7 @@ export default function ShippingDetails() {
                             placeholder="John Doe"
                         />
                     </div>
+
                     <div className="flex flex-col mb-4">
                         <label htmlFor="emailAddress" className="text-sm mb-2">
                             Email Address
@@ -87,6 +89,7 @@ export default function ShippingDetails() {
                             placeholder="name@example.com"
                         />
                     </div>
+
                     <div className="flex flex-col mb-4">
                         <label htmlFor="address" className="text-sm mb-2">
                             Address
@@ -99,6 +102,7 @@ export default function ShippingDetails() {
                             placeholder="Jl. Jalan"
                         />
                     </div>
+
                     <div className="flex flex-col mb-4">
                         <label htmlFor="postalCode" className="text-sm mb-2">
                             Postal Code
@@ -111,6 +115,7 @@ export default function ShippingDetails() {
                             placeholder="12345"
                         />
                     </div>
+                    
                     <div className="flex flex-col mb-4">
                         <label htmlFor="phoneNumber" className="text-sm mb-2">
                             Phone Number
@@ -123,7 +128,8 @@ export default function ShippingDetails() {
                             placeholder="088888888888"
                         />
                     </div>
-
+                    
+                    {/* Courier and Payment */}
                     <div className="flex flex-col mb-4">
                         <label htmlFor="courier">
                             Choose your courier service:
@@ -171,7 +177,7 @@ export default function ShippingDetails() {
                     <button
                         type="submit"
                         disabled={!isSumbitDisabled}
-                        className="bg-green-300 text-white hover:bg-green-500 focus:outline-none w-full py-3 rounded-full text-lg focus:text-black transition-all duration-300 px-6"
+                        className="bg-green-500 text-white focus:bg-black focus:text-white focus:outline-none w-full py-3 rounded-full text-lg transition-all duration-300 px-6"
                     >
                         Confirm
                     </button>
